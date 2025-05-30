@@ -91,7 +91,7 @@ const AboutUsPage: React.FC<Props> = ({ setActiveTab }) => {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
-                  name: 'Adv. Priya Sharma',
+                  name: 'Adv. Pradeep',
                   role: 'Chief Legal Officer',
                   experience: '15+ years',
                   specialization: 'Constitutional & Corporate Law',
