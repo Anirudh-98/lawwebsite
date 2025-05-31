@@ -18,7 +18,7 @@ const HomePage: React.FC<Props> = ({ setActiveTab }) => {
               <span className="block text-blue-300">Made Simple</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
-              Find case judgments, legal strategies, and updated sections with our advanced AI platform
+              Find case judgments, legal strategies, and updated laws with our advanced AI platform
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button

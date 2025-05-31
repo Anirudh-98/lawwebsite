@@ -1,5 +1,5 @@
 import React from 'react';
-import { Users, Target, Award, BookOpen, Scale, Shield } from 'lucide-react';
+import { Users, Target, Award, BookOpen, Scale, Shield, Lock, UserCheck, Database, Eye } from 'lucide-react';
 
 interface Props {
   setActiveTab?: (tab: string) => void;
@@ -84,65 +84,80 @@ const AboutUsPage: React.FC<Props> = ({ setActiveTab }) => {
           </div>
         </div>
 
-        {/* Team Section */}
+        {/* Exclusive Access & Security Section */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Our Team</h2>
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Exclusive Access & Security</h2>
           <div className="bg-white rounded-xl shadow-lg p-8">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                {
-                  name: 'Adv. Pradeep',
-                  role: 'Chief Legal Officer',
-                  experience: '15+ years',
-                  specialization: 'Constitutional & Corporate Law',
-                  image: 'PS'
-                },
-                {
-                  name: 'Dr. Rajesh Kumar',
-                  role: 'Head of Research',
-                  experience: '12+ years',
-                  specialization: 'Legal Research & Analytics',
-                  image: 'RK'
-                },
-                {
-                  name: 'Anirudh Jyothula ',
-                  role: 'Cybersecurity Analyst & Full-Stack Developer',
-                  experience: '4+ years',
-                  specialization: 'Cybersecurity,Full-Stack Development & AI',
-                  image: 'AJ'
-                },
-                {
-                  name: 'Prakash',
-                  role: 'UI/UX Designer',
-                  experience: '5+ years',
-                  specialization: 'UI/UX',
-                  image: 'MP'
-                },
-                {
-                  name: 'Chaitanya',
-                  role: 'UI/UX Designer',
-                  experience: '2+ years',
-                  specialization: 'UI/UX',
-                  image: 'MC'
-                },
-                {
-                  name: 'Sudheer',
-                  role: 'AI Engineer',
-                  experience: '2+ years',
-                  specialization: 'AI Prompt Engineer',
-                  image: 'S'
-                }
-              ].map((member, index) => (
-                <div key={index} className="text-center">
-                  <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-white font-bold text-lg">{member.image}</span>
-                  </div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-1">{member.name}</h3>
-                  <p className="text-blue-600 font-medium mb-1">{member.role}</p>
-                  <p className="text-sm text-gray-600 mb-2">{member.experience} Experience</p>
-                  <p className="text-sm text-gray-500">{member.specialization}</p>
+            <div className="text-center mb-8">
+              <div className="bg-red-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <UserCheck className="h-10 w-10 text-red-600" />
+              </div>
+              <h3 className="text-2xl font-semibold text-gray-900 mb-4">Verified Advocates Only</h3>
+              <p className="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
+                Access to our comprehensive legal database is exclusively reserved for practicing advocates. 
+                We verify each user's credentials through their Bar Council ID to ensure that sensitive 
+                legal information reaches only qualified legal professionals.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+              <div className="text-center p-4">
+                <div className="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <Lock className="h-6 w-6 text-blue-600" />
                 </div>
-              ))}
+                <h4 className="font-semibold text-gray-900 mb-2">Secure Authentication</h4>
+                <p className="text-sm text-gray-600">Multi-factor authentication with Bar Council ID verification</p>
+              </div>
+
+              <div className="text-center p-4">
+                <div className="bg-green-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <Database className="h-6 w-6 text-green-600" />
+                </div>
+                <h4 className="font-semibold text-gray-900 mb-2">Protected Database</h4>
+                <p className="text-sm text-gray-600">End-to-end encryption for all legal documents and case files</p>
+              </div>
+
+              <div className="text-center p-4">
+                <div className="bg-purple-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <Eye className="h-6 w-6 text-purple-600" />
+                </div>
+                <h4 className="font-semibold text-gray-900 mb-2">Access Monitoring</h4>
+                <p className="text-sm text-gray-600">Real-time monitoring and audit trails for all platform activities</p>
+              </div>
+
+              <div className="text-center p-4">
+                <div className="bg-orange-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <Shield className="h-6 w-6 text-orange-600" />
+                </div>
+                <h4 className="font-semibold text-gray-900 mb-2">Data Privacy</h4>
+                <p className="text-sm text-gray-600">Strict compliance with legal confidentiality and privacy standards</p>
+              </div>
+            </div>
+
+            <div className="bg-gray-50 rounded-lg p-6 mt-8">
+              <h4 className="text-lg font-semibold text-gray-900 mb-3 text-center">Why This Level of Security?</h4>
+              <div className="grid md:grid-cols-2 gap-6 text-sm text-gray-700">
+                <div>
+                  <p className="mb-2">
+                    <strong>Comprehensive Legal Information:</strong> Our database contains sensitive case judgments, 
+                    legal strategies, and precedents that require professional handling and understanding.
+                  </p>
+                  <p>
+                    <strong>Professional Responsibility:</strong> We ensure that legal information is accessed only 
+                    by qualified advocates who understand the ethical implications and proper usage of such data.
+                  </p>
+                </div>
+                <div>
+                  <p className="mb-2">
+                    <strong>Client Confidentiality:</strong> Many legal documents contain confidential information 
+                    that must be protected according to professional legal standards and regulations.
+                  </p>
+                  <p>
+                    <strong>Regulatory Compliance:</strong> Our verification process ensures compliance with 
+                    Bar Council regulations and maintains the integrity of the legal profession.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -153,9 +168,9 @@ const AboutUsPage: React.FC<Props> = ({ setActiveTab }) => {
           <div className="grid md:grid-cols-4 gap-6">
             {[
               { number: '50,000+', label: 'Legal Cases Indexed' },
-              { number: '2,500+', label: 'Active Users' },
+              { number: '2,500+', label: 'Verified Advocates' },
               { number: '15+', label: 'Years of Experience' },
-              { number: '99.9%', label: 'Uptime Reliability' }
+              { number: '99.9%', label: 'Security Uptime' }
             ].map((stat, index) => (
               <div key={index} className="bg-white p-6 rounded-xl shadow-lg text-center">
                 <div className="text-3xl font-bold text-blue-600 mb-2">{stat.number}</div>

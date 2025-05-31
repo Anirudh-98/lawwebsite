@@ -96,37 +96,6 @@ const PricingPage: React.FC<PricingPageProps> = ({ setActiveTab }) => {
           </p>
         </div>
 
-        {/* Billing Toggle */}
-        <div className="flex justify-center mb-12">
-          <div className="bg-white p-1 rounded-xl border border-gray-300 shadow-sm">
-            <button
-              onClick={() => setBillingCycle('monthly')}
-              className={`px-6 py-2 rounded-lg text-sm font-medium transition-all ${
-                billingCycle === 'monthly'
-                  ? 'bg-blue-600 text-white shadow-md'
-                  : 'text-gray-600 hover:text-gray-900'
-              }`}
-            >
-              Monthly
-            </button>
-            <button
-              onClick={() => setBillingCycle('yearly')}
-              className={`px-6 py-2 rounded-lg text-sm font-medium transition-all relative ${
-                billingCycle === 'yearly'
-                  ? 'bg-blue-600 text-white shadow-md'
-                  : 'text-gray-600 hover:text-gray-900'
-              }`}
-            >
-              Yearly
-              {billingCycle === 'yearly' && (
-                <span className="absolute -top-2 -right-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full">
-                  Save 17%
-                </span>
-              )}
-            </button>
-          </div>
-        </div>
-
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Features Sidebar */}
           <div className="lg:col-span-1">
@@ -153,10 +122,10 @@ const PricingPage: React.FC<PricingPageProps> = ({ setActiveTab }) => {
 
           {/* Pricing Card */}
           <div className="lg:col-span-2">
-            <div className="bg-white border-2 border-blue-200 rounded-xl shadow-xl overflow-hidden relative">
+            <div className="bg-white border-2 border-blue-200 rounded-xl shadow-xl overflow-hidden relative p-4">
               {/* Popular Badge */}
               <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                <div className="bg-blue-600 text-white px-6 py-2 rounded-full text-sm font-semibold flex items-center space-x-1 mt-12 ">
+                <div className="bg-blue-600 text-white px-6 py-2 rounded-full text-sm font-semibold flex items-center space-x-1 mt-[80px]">
                   <Crown className="w-4 h-4" />
                   <span>Most Popular</span>
                 </div>
@@ -167,6 +136,37 @@ const PricingPage: React.FC<PricingPageProps> = ({ setActiveTab }) => {
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">Professional Plan</h3>
                   <p className="text-gray-600">Complete legal research platform access</p>
+                </div>
+
+                {/* Billing Toggle - Now inside the pricing card */}
+                <div className="flex justify-center mb-8">
+                  <div className="bg-gray-100 p-1 rounded-xl border border-gray-200">
+                    <button
+                      onClick={() => setBillingCycle('monthly')}
+                      className={`px-6 py-2 rounded-lg text-sm font-medium transition-all ${
+                        billingCycle === 'monthly'
+                          ? 'bg-blue-600 text-white shadow-md'
+                          : 'text-gray-600 hover:text-gray-900'
+                      }`}
+                    >
+                      Monthly
+                    </button>
+                    <button
+                      onClick={() => setBillingCycle('yearly')}
+                      className={`px-6 py-2 rounded-lg text-sm font-medium transition-all relative ${
+                        billingCycle === 'yearly'
+                          ? 'bg-blue-600 text-white shadow-md'
+                          : 'text-gray-600 hover:text-gray-900'
+                      }`}
+                    >
+                      Yearly
+                      {billingCycle === 'yearly' && (
+                        <span className="absolute -top-4 -right-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full">
+                          Save 17%
+                        </span>
+                      )}
+                    </button>
+                  </div>
                 </div>
 
                 {/* Pricing */}
